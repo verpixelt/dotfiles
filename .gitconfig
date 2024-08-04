@@ -1,0 +1,7 @@
+[user]
+	name = arcodes
+	email = mail@kevinlorenz.com
+[core]
+	editor = nano
+[init]
+	defaultBranch = main
