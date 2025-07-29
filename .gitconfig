@@ -1,7 +1,31 @@
 [user]
-	name = arcodes
-	email = mail@kevinlorenz.com
+  name = Kevin Lorenz
+  email = kevin.lorenz@virtual7.de
+
 [core]
-	editor = nano
+  editor = code --wait         # Uses VS Code for git commit messages
+  autocrlf = input             # Convert CRLF to LF on commit (ideal for macOS/unix)
+  excludesfile = ~/.gitignore_global
+  safecrlf = true
+
+[push]
+  default = simple
+
+[diff]
+  tool = vscode
+  color = auto
+
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+  tool = vscode
+
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+
+[credential]
+  helper = osxkeychain
+
 [init]
-	defaultBranch = main
+  defaultBranch = main
